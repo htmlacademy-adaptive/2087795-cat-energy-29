@@ -1,0 +1,41 @@
+.map__wrapper-contacts {
+  width: 280px;
+  padding: 26px 20px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  color: $color-black;
+}
+
+.map__title {
+  width: 125px;
+  margin: 0;
+
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.map__wrapper-text {
+  width: 140px;
+  font-family: $font-text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.map__text {
+  margin: 0;
+}
+
+.map__wrapper-img {
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+}

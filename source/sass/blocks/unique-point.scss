@@ -1,0 +1,71 @@
+.unique-point {
+  color: $color-white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.unique-point-wrapper {
+  position: relative;
+}
+
+.unique-point__wrapper-bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -10;
+  height: 302px;
+  width: 100%;
+  background-color: $color-bg-green;
+}
+
+.unique-point__wrapper-img {
+  z-index: -10;
+  height: 302px;
+  margin: 0 auto;
+
+  background:
+    linear-gradient(rgba(104, 183, 56, 0.85),rgba(104, 183, 56, 0.85)),
+    url("../../img/background-unique.jpg"),
+    #50544e;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.unique-point__wrapper-text {
+  z-index: 10;
+  margin: 0 auto;
+  width: 280px;
+  padding: 0 20px;
+}
+
+.unique-point__title {
+  padding: 27px 0 25px 0;
+  color: $color-white;
+}
+
+.unique-point__text {
+  padding-bottom: 25px;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.unique-point__wrapper-product {
+  margin-bottom: 3px;
+}
+
+.unique-point__link {
+  display: inline-block;
+  width: 240px;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: $color-bg-green;
+  color: $color-white;
+}

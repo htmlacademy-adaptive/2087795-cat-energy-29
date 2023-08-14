@@ -1,0 +1,65 @@
+.advantages {
+  margin-bottom: 49px;
+}
+
+.advantages__wrapper {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 40px;
+  line-height: 40px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  font-family: $font-text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  list-style-type: none;
+  color: $color-black;
+}
+
+.advantages__item {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+}
+
+.advantages__icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.advantages__icon-benefit {
+  background-image: url("../../img/icon-benefit.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__icon-cooking {
+  background-image: url("../../img/icon-cooking.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__icon-shift {
+  background-image: url("../../img/icon-shift.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__icon-time {
+  background-image: url("../../img/icon-time.svg");
+  background-repeat: no-repeat;
+}
+
+.advantages__item-text {
+  width: 200px;
+  margin: 0;
+}
