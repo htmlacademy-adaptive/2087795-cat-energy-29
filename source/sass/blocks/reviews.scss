@@ -1,0 +1,89 @@
+.reviews__list {
+  width: 280px;
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.reviews__item {
+  background-color: $color-bg-light-gray;
+  margin-bottom: 20px;
+  padding: 24px 20px 18px 20px;
+}
+
+.reviews__item-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.reviews__icon-wrapper {
+  position: relative;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $color-bg-green;
+}
+
+.reviews__icon-sitting {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 50px;
+  background-image: url("../../img/icon-cat-sitting.svg");
+}
+
+.reviews__icon-coming {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 67px;
+  height: 28px;
+  background-image: url("../../img/icon-cat-coming.svg");
+}
+
+.reviews__title {
+  margin: 0;
+
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  color: $color-black;
+}
+
+.reviews__text {
+  font-family: $font-text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: $color-black;
+}
+
+.reviews__link {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $color-black;
+}
+
+.reviews__link-text {
+  margin-right: 15px;
+}
