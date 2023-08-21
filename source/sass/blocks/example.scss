@@ -6,7 +6,6 @@
   width: 280px;
   padding: 0 20px 40px;
   margin: 0 auto;
-
 }
 
 .example__title {
@@ -30,7 +29,6 @@
   display: flex;
   justify-content: space-between;
   gap: 32px;
-
 }
 
 .example__item-wrappers {
@@ -89,7 +87,7 @@
 }
 
 .example__wrapper-img {
-  border: 1px solid red;
+  border: 1px solid #ff0000;
   text-align: center;
 }
 
