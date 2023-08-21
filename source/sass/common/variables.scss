@@ -1,14 +1,20 @@
-$color-block: #ffffc6;
-
 $font-heading: "Oswald", "Arial", sans-serif;
 $font-text: "Lato", "Arial", sans-serif;
-
+//
 $color-black: #000000;
 $color-white: #ffffff;
-
+//
 $color-bg-green: #68b738;
 $color-bg-transparent: rgba(105, 183, 56, 0.85);
 $color-bg-light-gray: #f2f2f2;
 $color-bg-gray: #eaeaea;
 $color-line-gray: #cdcdcd;
 $color-text: #444444;
+//
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-width-only: 767px;
+//
+//
+$darkgrey: #292929;
+$lightgrey: #f8f5f2;

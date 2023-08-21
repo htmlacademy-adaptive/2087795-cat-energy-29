@@ -9,7 +9,7 @@
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper">
-        <div class="main-header__wrapper-logo">
+        <nav class="main-header__nav">
           <a class="main-header__link-logo" href="#">
             <img class="main-header__logo-img" width="33" height="38" src="./img/logo-img.svg" alt="Логотип кэт энерджи.">
             <img class="main-header__logo-text" width="101" height="18" src="./img/logo-text.svg" alt="Логотип текстовый кэт энерджи.">
@@ -17,20 +17,18 @@
           <button class="main-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
-        </div>
-        <nav class="main-header__nav">
-          <ul class="main-header__nav-list">
-            <li class="main-header__nav-item">
-              <a class="main-header__link" href="#">Главная</a>
-            </li>
-            <li class="main-header__nav-item">
-              <a class="main-header__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-header__nav-item">
-              <a class="main-header__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
         </nav>
+        <ul class="main-header__menu-list">
+          <li class="main-header__menu-item">
+            <a class="main-header__menu-link main-header__menu-link--active" href="index2.html">Главная</a>
+          </li>
+          <li class="main-header__menu-item">
+            <a class="main-header__menu-link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-header__menu-item">
+            <a class="main-header__menu-link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
       </div>
     </header>
     <main class="main-container">
@@ -38,23 +36,29 @@
         Подбор и продажа специального корма для похудения вашего котика.
       </h1>
       <section class="unique-point">
-        <div class="unique-point-wrapper">
-          <div class="unique-point__wrapper-bg">
-            <div class="unique-point__wrapper-img">
-              <span class="visually-hidden">Фоновое изображение котика, который сытно поел.
-              </span>
+        <div class="unique-point__wrapper-bg">
+            <img class="unique-point__bg-img" src="./img/background-unique.jpg" width="320" height="302" alt="">
+            <img class="unique-point__bg-img-2" src="./img/unique-cat-bg.jpg" width="1040" height="694" alt="">
+        </div>
+        <div class="unique-point__wrapper-bg-2">
+            <div class="unique-point__wrapper-text">
+                <h2 class="unique-point__title">
+                    Функциональное<br>
+                    питание для котов
+                </h2>
+                <p class="unique-point__text">Занялся собой? Займись котом!</p>
+                <div class="unique-point__wrapper-product">
+                    <img  class="unique-point__product-img" width="280" height="270" src="./img/main-chicken-1000gr.png" alt="Курица про 1000 грамм.">
+                </div>
+                <a class="unique-point__link" href="form.html">
+                    Подобрать программу
+                </a>
             </div>
-          </div>
-          <div class="unique-point__wrapper-text">
-            <h2 class="unique-point__title title">Функциональное  питание для котов</h2>
-            <p class="unique-point__text">Занялся собой? Займись котом!</p>
-            <div class="unique-point__wrapper-product">
-              <img width="280" height="270" src="./img/main-chicken-1000gr.png" alt="Курица про 1000 грамм.">
-            </div>
-            <a class="unique-point__link" href="form.html">Подобрать программу</a>
-          </div>
         </div>
       </section>
+
+
+
       <section class="reviews">
         <h2 class="visually-hidden">Обзор программ питания</h2>
         <ul class="reviews__list">

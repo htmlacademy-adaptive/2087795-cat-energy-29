@@ -7,47 +7,196 @@
   text-transform: uppercase;
 }
 
-.main-header__wrapper {
-  width: 280px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-.main-header__wrapper-logo {
-  position: relative;
+.main-header__menu-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 13px 0 14px;
-}
-
-.main-header__link-logo {
-  display: inline-block;
-  text-decoration: none;
-  color: $color-black;
-}
-
-.main-header__link {
-  display: inline-block;
-  text-decoration: none;
-  color: $color-black;
-}
-
-.main-header__logo-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.main-header__nav-list {
-  margin: 0;
-  padding: 22px 0 24px 0;
   list-style-type: none;
-  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-.main-header__nav-item:not(:last-child) {
-  margin-bottom: 46px;
+.main-header__menu-link {
+  display: block;
+  text-decoration: none;
+  color: $color-black;
+}
+
+@media (max-width: 767px) {
+  .main-header__nav {
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $color-bg-gray;
+  }
+
+  .main-header__link-logo {
+    position: relative;
+    // width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+
+    outline: 1px solid rgba(255, 0, 0, 0.8);
+    outline-offset: -1px;
+  }
+
+  .main-header__logo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .main-header__toggle {
+    position: absolute;
+    display: block;
+    width: 65px;
+    height: 65px;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    // outline: 1px solid rgba(255, 0, 0, 0.8);
+    // outline-offset: -1px;
+  }
+
+  // Меню ЗАКРЫТО
+  // .main-header__toggle::after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 24px;
+  //   height: 2px;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   background-color: #000000;
+  //   box-shadow: 0 8px 0 0 #000000, 0 -8px 0 0 #000000;
+  // }
+
+  // Меню ОТКРЫТО
+  .main-header__toggle::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    right: 20px;
+
+    background-color: #000000;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  .main-header__toggle::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    right: 20px;
+
+    background-color: #000000;
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
+
+  // Если не сработал JS
+  // .main-header__toggle--nojs {
+  //   display: none;
+  // }
+
+  .main-header__menu-list {
+
+    flex-direction: column;
+    align-items: center;
+
+    outline: 1px solid rgba(255, 0, 0, 0.8);
+    outline-offset: -1px;
+  }
+
+  .main-header__menu-item {
+    width: 100%;
+
+    border-bottom: 1px solid $color-line-gray;
+  }
+
+  .main-header__menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 22px 0 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-header__wrapper {
+    padding: 25px 20px 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    outline: 1px solid rgba(0, 72, 255, 0.8);
+    outline-offset: -1px;
+  }
+
+  .main-header__link-logo {
+    display: flex;
+    width: 174px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-header__toggle {
+    display: none;
+  }
+
+  .main-header__menu-list {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 33px;
+
+    outline: 1px solid rgba(255, 0, 0, 0.8);
+    outline-offset: -1px;
+  }
+
+  .main-header__menu-link {
+    padding-bottom: 8px;
+  }
+
+  .main-header__menu-link--active {
+    position: relative;
+  }
+
+  .main-header__menu-link--active::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: $color-bg-green;
+  }
+}
+
+@media (min-width: 1220px) {
+  .main-header {
+    position: absolute;
+    max-width: 1220px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .main-header__menu-link {
+    color: $color-white;
+  }
+
+  .main-header__menu-link--active::before {
+    background-color: $color-white;
+  }
 }
