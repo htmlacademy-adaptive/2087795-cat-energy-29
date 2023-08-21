@@ -28,8 +28,6 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $color-bg-gray;
-
-    background-color: aqua;
   }
 
   .main-header__link-logo {
@@ -61,9 +59,8 @@
     border: none;
     outline: none;
     background: transparent;
-
-    outline: 1px solid rgba(255, 0, 0, 0.8);
-    outline-offset: -1px;
+    // outline: 1px solid rgba(255, 0, 0, 0.8);
+    // outline-offset: -1px;
   }
 
   // Меню ЗАКРЫТО
@@ -182,7 +179,6 @@
     height: 2px;
     background-color: $color-bg-green;
   }
-
 }
 
 @media (min-width: 1220px) {
@@ -203,5 +199,4 @@
   .main-header__menu-link--active::before {
     background-color: $color-white;
   }
-
 }
