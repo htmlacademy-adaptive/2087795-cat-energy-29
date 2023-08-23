@@ -8,7 +8,10 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <div class="main-header__wrapper">
+      <!-- main-header__nav--closed
+          main-header__nav--opened
+        main-header__nav--nojs -->
+      <div class="main-header__wrapper main-header__nav--closed">
         <nav class="main-header__nav">
           <a class="main-header__link-logo" href="#">
             <img class="main-header__logo-img" width="33" height="38" src="./img/logo-img.svg" alt="Логотип кэт энерджи.">
@@ -56,93 +59,44 @@
             </div>
         </div>
       </section>
-
-
-
       <section class="reviews">
         <h2 class="visually-hidden">Обзор программ питания</h2>
-        <ul class="reviews__list">
-          <li class="reviews__item">
-            <div class="reviews__item-wrapper">
-              <div class="reviews__icon-wrapper">
-                <div class="reviews__icon-sitting">
-                  <span class="visually-hidden">Иконка похудение.</span>
-                </div>
-              </div>
-              <h3 class="reviews__title">Похудение</h3>
-            </div>
+        <div class="reviews__wrapper">
+          <article class="reviews__item reviews__item-cat-sitting">
+            <h3 class="reviews__title">Похудение</h3>
             <p class="reviews__text">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
             <a class="reviews__link" href="#">
-              <span class="reviews__link-text">
-                Каталог slim
-              </span>
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-              </svg>
+              Каталог slim
             </a>
-          </li>
-          <li class="reviews__item">
-            <div class="reviews__item-wrapper">
-              <div class="reviews__icon-wrapper">
-                <div class="reviews__icon-coming">
-                  <span class="visually-hidden">Иконка похудение.</span>
-                </div>
-              </div>
-              <h3 class="reviews__title">Набор массы</h3>
-            </div>
+          </article>
+          <article class="reviews__item reviews__item-cat-coming">
+            <h3 class="reviews__title">Набор массы</h3>
             <p class="reviews__text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
             <a class="reviews__link" href="#">
-              <span class="reviews__link-text">
-                Каталог pro
-              </span>
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-              </svg>
+              Каталог pro
             </a>
-          </li>
-        </ul>
+          </article>
+        </div>
       </section>
       <section class="advantages">
         <div class="advantages__wrapper">
           <h2 class="advantages__title title">Как это работает</h2>
           <ol class="advantages__list">
-            <li class="advantages__item ">
-              <div class="advantages__icon advantages__icon-benefit">
-                <span class="visually-hidden">Иконка полезные вещества.</span>
-              </div>
-              <p class="advantages__item-text">
-                Функциональное питание содержит только полезные питательные вещества.
-              </p>
+            <li class="advantages__item advantages__icon-benefit">
+              Функциональное питание содержит только полезные питательные вещества.
             </li>
-            <li class="advantages__item">
-              <div class="advantages__icon advantages__icon-cooking">
-                <span class="visually-hidden">Иконка способ приготовления.</span>
-              </div>
-              <p class="advantages__item-text">
-                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-              </p>
+            <li class="advantages__item advantages__icon-cooking">
+              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </li>
-            <li class="advantages__item">
-              <div class="advantages__icon advantages__icon-shift">
-                <span class="visually-hidden">Иконка замена питания.</span>
-              </div>
-              <p class="advantages__item-text">
-                Замените один-два приема обычной еды на наше функциональное питание.
-              </p>
+            <li class="advantages__item advantages__icon-shift">
+              Замените один-два приема обычной еды на наше функциональное питание.
             </li>
-            <li class="advantages__item">
-              <div class="advantages__icon advantages__icon-time">
-                <span class="visually-hidden">Иконка результат через месяц.</span>
-              </div>
-              <p class="advantages__item-text">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-              </p>
+            <li class="advantages__item advantages__icon-time">
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
             </li>
           </ol>
         </div>
@@ -153,31 +107,33 @@
           <p class="example__text">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <dl class="example__list">
-            <div class="example__item-wrappers">
-              <div class="example__item">
-                <dt class="example__weight">
-                  5 кг
-                </dt>
-                <dd class="example__description">
-                  Снижение<br>
-                  веса
-                </dd>
+          <div class="example__wrapper-items">
+            <dl class="example__items">
+              <div class="example__item-border">
+                <div class="example__item">
+                  <dt class="example__weight">
+                    5 кг
+                  </dt>
+                  <dd class="example__description">
+                    Снижение
+                    веса
+                  </dd>
+                </div>
               </div>
-            </div>
-            <div class="example__item-wrappers">
-              <div class="example__item">
-                <dt class="example__weight">
-                  69 дней
-                </dt>
-                <dd class="example__description">
-                  Затрачено<br>
-                  времени
-                </dd>
+              <div class="example__item-border">
+                <div class="example__item">
+                  <dt class="example__weight">
+                    69 дней
+                  </dt>
+                  <dd class="example__description">
+                    Затрачено
+                    времени
+                  </dd>
+                </div>
               </div>
-            </div>
-          </dl>
-          <p class="example__subtitle">Затраты на питание: 15 000 руб.</p>
+            </dl>
+            <p class="example__subtitle">Затраты на питание: <span>15 000 руб.</span> </p>
+          </div>
           <div class="example__wrapper-img">
             <img class="example__img" src="./img/cat-before@1x.png" width="280" height="256" alt="Результат 'До'.">
             <img class="example__img" src="./img/cat-after@1x.png" width="280" height="256" alt="Результат 'После'.">
@@ -210,22 +166,28 @@
           </div>
         </div>
         <div class="map__wrapper-img">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d327.1157692394129!2d30.322892539901577!3d59.9389023377274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1691603356698!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198502!2d30.320472477853066!3d59.93871916209304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1692641032100!5m2!1sru!2sru"
+            width="320"
+            height="362"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Офис компании по адресу Большая Конюшенная ул. 19/8, Санкт-Петербург">
+          </iframe>
           <img class="visually-hidden map__pin" width="57" height="53" src="./img/map-pin.png" alt="Указатель на карте.">
           <img class="visually-hidden map__img" width="320" height="362" src="./img/map-mobile.jpg" alt="Положение магазина на карте.">
         </div>
       </section>
     </main>
-
-
     <footer class="footer">
-      <div class="footer_wrapper">
-        <div class="footer__wrappers">
+      <div class="footer_wrappers">
+        <div class="footer__wrapper">
           <a class="footer__link-logo" href="#">
             <img class="main-footer__logo" width="128" height="24" src="./img/logo-text.svg" alt="текстовый логотип компании кэт энерджи.">
           </a>
         </div>
-        <div class="footer__wrappers">
+        <div class="footer__wrapper">
           <ul class="footer__list">
             <li class="footer__item">
               <a class="footer__link" href="#">
@@ -253,7 +215,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__wrappers">
+        <div class="footer__wrapper">
           <a class="footer__link-copyright" href="#">
             <p class="footer__copyright-text">
               HTML Academy
@@ -265,5 +227,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
