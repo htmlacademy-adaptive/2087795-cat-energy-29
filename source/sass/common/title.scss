@@ -7,3 +7,10 @@
   line-height: 36px;
   color: $color-black;
 }
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
