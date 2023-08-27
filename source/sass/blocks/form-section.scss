@@ -18,6 +18,7 @@
 }
 
 .form__fieldset {
+  position: relative;
   margin: 0;
   padding: 0;
   border: none;
@@ -116,10 +117,6 @@
   padding: 0 20px 0;
 }
 
-.form__fieldset {
-  position: relative;
-}
-
 .form__legend {
   width: 187px;
   padding: 24px 20px 35px 0;
@@ -161,15 +158,6 @@
   line-height: 18px;
   color: $color-text;
   border: 1px solid $color-line-gray;
-
-}
-
-.form__fieldset--info .form__input::placeholder {
-  text-transform: none;
-  font-family: $font-text;
-  font-size: 16px;
-  line-height: 18px;
-  opacity: 0.5;
 }
 
 .form__fieldset--comment {
@@ -272,8 +260,6 @@
   text-align: center;
 }
 
-
-
 @media (min-width: 768px) {
   .form__header {
     padding: 0 70px;
@@ -350,8 +336,8 @@
     margin: 0 70px 35px;
     border: 1px solid $color-line-gray;
     padding: 23px 27px 27px;
-  // border-top: 1px solid $color-line-gray;
-  //   border-bottom: 1px solid $color-line-gray;
+    // border-top: 1px solid $color-line-gray;
+    // border-bottom: 1px solid $color-line-gray;
   }
 
   .form__fieldset--target label {
@@ -452,14 +438,6 @@
     // border: 1px solid $color-line-gray;
   }
 
-  .form__fieldset--info .form__input::placeholder {
-    // text-transform: none;
-    // font-family: $font-text;
-    font-size: 18px;
-    line-height: 18px;
-    // opacity: 0.5;
-  }
-
   .form__fieldset--comment {
     // padding: 0 20px 0;
     margin-top: -40px;
@@ -504,8 +482,6 @@
     grid-template-rows: 40px;
     padding: 0;
   }
-
-
 
   .form__fieldset--optional label {
     // position: relative;
@@ -573,8 +549,6 @@
     line-height: 16px;
     text-align: start;
   }
-
-
 }
 
 @media (min-width: 1260px) {
@@ -589,6 +563,7 @@
   }
 
   .form__fieldset {
+    position: relative;
     // max-width: 1220px;
     margin: 0;
     padding: 0;
@@ -605,7 +580,6 @@
     margin: 0 auto 69px;
     grid-template-columns: 1fr 1fr;
     column-gap: 81px;
-
   }
 
   .form__items {
@@ -620,8 +594,8 @@
     // margin: 0 auto;
     border: 1px solid $color-line-gray;
     padding: 40px 28px 25px;
-  // border-top: 1px solid $color-line-gray;
-  //   border-bottom: 1px solid $color-line-gray;
+    // border-top: 1px solid $color-line-gray;
+    //   border-bottom: 1px solid $color-line-gray;
   }
 
   .form__fieldset--target label {
@@ -659,10 +633,6 @@
     // border-radius: 50%;
   }
 
-
-
-
-
   .form__fieldset--pet-owner,
   .form__fieldset--comment,
   .form__fieldset--optional {
@@ -670,10 +640,6 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 40px;
-  }
-
-  .form__fieldset {
-    position: relative;
   }
 
   .form__legend {
@@ -758,7 +724,7 @@
     padding: 24px 40px 76px;
   }
 
-  .form__fieldset--comment  .form__items {
+  .form__fieldset--comment .form__items {
     max-width: 1220px;
     margin: 0 auto 67px;
   }
