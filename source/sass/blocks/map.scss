@@ -1,7 +1,5 @@
 .map__wrapper-contacts {
-  padding: 0 20px;
-  margin: 26px auto;
-
+  padding: 28px 20px 26px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,6 +7,8 @@
 
   color: $color-black;
 }
+
+
 
 .map__title {
   width: 125px;
@@ -42,6 +42,11 @@
 }
 
 @media (max-width: 767px) {
+  .map__wrapper-contacts--bg {
+    background-color: $color-bg-gray;
+    padding: 28px 20px 26px;
+  }
+
   .map__wrapper-img iframe {
     height: 362px;
   }
@@ -49,8 +54,12 @@
 
 @media (min-width: 768px) {
   .map__wrapper-contacts {
-    padding: 0 30px;
-    margin: 60px auto;
+    padding: 60px 30px;
+  }
+
+  .map__wrapper-contacts--bg {
+    background-color: $color-bg-gray;
+    padding: 60px 70px;
   }
 
   .map__title {
@@ -96,7 +105,12 @@
 
     background-color: $color-white;
     padding: 60px 80px;
-    margin: 0;
+
+  }
+
+  .map__wrapper-contacts--bg {
+    background-color: $color-white;
+    padding: 60px 70px;
   }
 
   .map__title {
