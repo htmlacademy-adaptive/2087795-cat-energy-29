@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи / Подбор программы</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/180.png">
+    <link rel="manifest" href="./manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -13,8 +17,12 @@
         main-header__nav--nojs -->
       <div class="main-header__wrapper main-header__nav--closed">
         <nav class="main-header__nav">
-          <a class="main-header__link-logo" href="index.html">
-            <img class="main-header__logo-img" width="33" height="38" src="./img/logo-img.svg" alt="Логотип кэт энерджи.">
+          <a class="main-header__link-logo" href="#">
+            <picture>
+              <source media="(min-width: 1260px)" width="202" height="59" srcset="./img/logo-img-desktop.svg">
+              <source media="(min-width: 768px)" width="174" height="50" srcset="./img/logo-img-tablet.svg">
+              <img class="main-header__logo-img" width="33" height="38" src="./img/logo-img.svg" alt="Логотип кэт энерджи.">
+            </picture>
             <img class="main-header__logo-text" width="101" height="18" src="./img/logo-text.svg" alt="Логотип текстовый кэт энерджи.">
           </a>
           <button class="main-header__toggle" type="button">

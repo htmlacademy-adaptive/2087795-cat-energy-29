@@ -16,10 +16,6 @@
   display: block;
 }
 
-.unique-point__bg-img-2 {
-  display: none;
-}
-
 .unique-point__wrapper-text {
   max-width: 767px;
   margin: 0 auto;
@@ -108,6 +104,7 @@
   .unique-point__wrapper-text {
     align-items: start;
     color: #000000;
+    padding: 0 30px;
   }
 
   .unique-point__title {
@@ -127,7 +124,7 @@
   }
 
   .unique-point__wrapper-product {
-    margin: -80px auto 0;
+    margin: -80px 0 0 -60px;
     order: 4;
     z-index: -1;
   }
@@ -173,13 +170,7 @@
   }
 
   .unique-point__bg-img {
-    display: none;
-  }
-
-  .unique-point__bg-img-2 {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
     object-fit: cover;
   }
 

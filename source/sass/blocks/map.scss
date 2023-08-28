@@ -30,13 +30,26 @@
 }
 
 .map__wrapper-img {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 362px;
 }
 
 .map__wrapper-img iframe {
   width: 100%;
   display: block;
+}
+
+.map__img {
+  position: absolute;
+  width: 320px;
+  margin: 0 auto;
+  z-index: -1;
+  top: 0px;
+  // left: 0;
+  // right: 0;
+  object-fit: none;
+  // object-position: center center;
 }
 
 @media (max-width: 767px) {
