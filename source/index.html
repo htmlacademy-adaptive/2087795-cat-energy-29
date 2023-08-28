@@ -18,7 +18,11 @@
       <div class="main-header__wrapper main-header__nav--closed">
         <nav class="main-header__nav">
           <a class="main-header__link-logo" href="#">
-            <img class="main-header__logo-img" width="33" height="38" src="./img/logo-img.svg" alt="Логотип кэт энерджи.">
+            <picture>
+              <source media="(min-width: 1260px)" width="202" height="59" srcset="./img/logo-img-desktop.svg">
+              <source media="(min-width: 768px)" width="174" height="50" srcset="./img/logo-img-tablet.svg">
+              <img class="main-header__logo-img" width="33" height="38" src="./img/logo-img.svg" alt="Логотип кэт энерджи.">
+            </picture>
             <img class="main-header__logo-text" width="101" height="18" src="./img/logo-text.svg" alt="Логотип текстовый кэт энерджи.">
           </a>
           <button class="main-header__toggle" type="button">
