@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи / Каталог</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/180.png">
+    <link rel="manifest" href="./manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -13,7 +17,7 @@
         main-header__nav--nojs -->
       <div class="main-header__wrapper main-header__nav--closed">
         <nav class="main-header__nav">
-          <a class="main-header__link-logo" href="#">
+          <a class="main-header__link-logo" href="index.html">
             <picture>
               <source media="(min-width: 1260px)" width="202" height="59" srcset="./img/logo-img-desktop.svg">
               <source media="(min-width: 768px)" width="174" height="50" srcset="./img/logo-img-tablet.svg">
@@ -38,7 +42,6 @@
         </ul>
       </div>
     </header>
-
 
     <main class="main-container">
       <section class="catalog-section">
@@ -416,8 +419,11 @@
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             title="Офис компании по адресу Большая Конюшенная ул. 19/8, Санкт-Петербург">
           </iframe>
-          <img class="visually-hidden map__pin" width="57" height="53" src="./img/map-pin.png" alt="Указатель на карте.">
-          <img class="visually-hidden map__img" width="320" height="362" src="./img/map-mobile.jpg" alt="Положение магазина на карте.">
+          <picture>
+            <source media="(min-width: 1260px)" width="1440" height="400" srcset="./img/map-desktop.jpg">
+            <source media="(min-width: 768px)" width="768" height="400" srcset="./img/map-tablet.jpg">
+            <img class="map__img" width="320" height="362" src="./img/map-mobile.jpg" alt="Положение магазина на карте.">
+          </picture>
         </div>
       </section>
     </main>
