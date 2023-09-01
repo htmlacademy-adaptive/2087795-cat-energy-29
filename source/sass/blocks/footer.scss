@@ -2,7 +2,7 @@
   background-color: $color-bg-gray;
 }
 
-.footer_wrappers {
+.footer__wrappers {
   padding: 20px 20px;
 
   display: flex;
@@ -56,7 +56,7 @@
 }
 
 @media (min-width: 678px) {
-  .footer_wrappers {
+  .footer__wrappers {
     padding: 55px 30px;
     flex-direction: row;
     justify-content: space-between;
@@ -82,7 +82,7 @@
 }
 
 @media (min-width: 1260px) {
-  .footer_wrappers {
+  .footer__wrappers {
     width: 1220px;
     margin: 0 auto;
     padding: 66px 0;

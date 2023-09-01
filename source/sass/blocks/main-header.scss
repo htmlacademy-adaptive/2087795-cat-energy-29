@@ -64,13 +64,13 @@
 
   // Если не сработал JS
 
-  .main-header__nav--nojs .main-header__toggle {
+  .main-header__wrapper--nojs .main-header__toggle {
     display: none;
   }
 
   // Меню ОТКРЫТО
 
-  .main-header__nav--opened .main-header__toggle {
+  .main-header__wrapper--opened .main-header__toggle {
     display: block;
 
     &:hover,
@@ -104,7 +104,7 @@
     }
   }
 
-  .main-header__nav--opened .main-header__menu-list {
+  .main-header__wrapper--opened .main-header__menu-list {
     position: absolute;
     top: 65px;
     right: 0;
@@ -115,11 +115,11 @@
 
   // Меню ЗАКРЫТО
 
-  .main-header__nav--closed .main-header__toggle {
+  .main-header__wrapper--closed .main-header__toggle {
     display: block;
   }
 
-  .main-header__nav--closed .main-header__toggle::after {
+  .main-header__wrapper--closed .main-header__toggle::after {
     content: "";
     position: absolute;
     width: 24px;
@@ -131,14 +131,14 @@
     box-shadow: 0 8px 0 0 $color-black, 0 -8px 0 0 $color-black;
   }
 
-  .main-header__nav--closed .main-header__toggle:active::after {
+  .main-header__wrapper--closed .main-header__toggle:active::after {
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow:
       0 8px 0 0 rgba(0, 0, 0, 0.8),
       0 -8px 0 0 rgba(0, 0, 0, 0.8);
   }
 
-  .main-header__nav--closed .main-header__menu-list {
+  .main-header__wrapper--closed .main-header__menu-list {
     display: none;
   }
 
@@ -231,6 +231,10 @@
   .main-header {
     max-width: 1220px;
     margin: 0 auto;
+  }
+
+  .main-header__wrapper {
+    padding: 58px 0 0;
   }
 
   .main-header__link-logo {
