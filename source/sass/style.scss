@@ -1,17 +1,22 @@
-@import "../sass/common/global.scss";
-@import "../sass/common/fonts.scss";
-@import "../sass/common/visually-hidden";
-@import "../sass/common/variables";
+@import "./common/global.scss";
+@import "./common/fonts.scss";
+@import "./common/visually-hidden";
+@import "./common/variables";
 //
-@import "../sass/common/title";
+@import "./common/title";
 //
-@import "../sass/blocks/main-header.scss";
-@import "../sass/blocks/unique-point.scss";
-@import "../sass/blocks/reviews.scss";
-@import "../sass/blocks/advantages.scss";
-@import "../sass/blocks/example.scss";
-@import "../sass/blocks/map.scss";
-@import "../sass/blocks/footer.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/unique-point.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/example.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
 //
-@import "../sass/blocks/form-main";
-@import "../sass/blocks/form.scss";
+@import "./blocks/form-main";
+@import "./blocks/form.scss";
+@import "./blocks/main-catalog.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/card.scss";
+@import "./blocks/card-plus.scss";
+@import "./blocks/optional.scss";
