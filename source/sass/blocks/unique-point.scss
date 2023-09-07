@@ -29,7 +29,7 @@
 }
 
 .unique-point__title {
-  padding-top: 37px;
+  padding-top: 27px;
   margin: 0 0 25px;
   font-weight: 400;
   font-size: 36px;
@@ -60,18 +60,28 @@
 }
 
 .unique-point__link {
-  display: inline-block;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
 
-  padding: 8px;
-
   background-color: $color-bg-green;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   color: $color-white;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
+}
+
+.unique-point__link:hover {
+  background-color: #5eaa2f;
+}
+
+.unique-point__link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5eaa2f;
 }
 
 @media (max-width: 767px) {
@@ -97,6 +107,10 @@
 }
 
 @media (min-width: 768px) {
+  .unique-point {
+    margin-bottom: 0;
+  }
+
   .unique-point__wrapper-bg {
     display: none;
   }
@@ -108,7 +122,7 @@
   }
 
   .unique-point__title {
-    padding-top: 67px;
+    padding: 67px 0 0 90px;
     margin: 0 0 40px;
     font-weight: 400;
     font-size: 60px;
@@ -118,13 +132,14 @@
 
   .unique-point__text {
     margin: 0 0 50px;
+    padding: 0 0 0 90px;
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
   }
 
   .unique-point__wrapper-product {
-    margin: -80px 0 0 -60px;
+    margin: -85px 0 0 0;
     order: 4;
     z-index: -1;
   }
@@ -135,7 +150,12 @@
   }
 
   .unique-point__link {
-    padding: 14px 26px;
+    margin: 0 0 0 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 244px;
+    height: 54px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -156,6 +176,7 @@
     justify-content: flex-end;
     width: 50%;
     order: 2;
+    object-fit: fill;
     background: linear-gradient(180deg, #4d4c51 0%, #535257 45.92%, #535257 72%, #4f5054 100%);
   }
 
@@ -171,7 +192,7 @@
 
   .unique-point__bg-img {
     height: 100%;
-    object-fit: cover;
+    object-position: 0 0;
   }
 
   .unique-point__wrapper-bg-2 {
@@ -186,16 +207,21 @@
     position: relative;
     box-sizing: border-box;
     margin: 0;
-    padding: 0 0 0 79px;
+    padding: 0 0 0 0;
     width: 610px;
   }
 
   .unique-point__title {
-    padding-top: 225px;
+    padding: 225px 0 0 80px;
   }
 
   .unique-point__text {
     margin: 0 0 52px;
+    padding: 0 0 0 80px;
+  }
+
+  .unique-point__link {
+    margin: 0 0 0 80px;
   }
 
   .unique-point__wrapper-product {
@@ -205,7 +231,7 @@
     order: 0;
     /* z-index: -1;    */
     top: 143px;
-    right: -400px;
+    right: -388px;
   }
 
   .unique-point__product-img {

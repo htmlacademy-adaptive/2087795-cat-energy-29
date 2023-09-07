@@ -3,8 +3,17 @@
 
   @media (min-width: 768px) {
     box-sizing: border-box;
-    padding: 0 38px;
+    padding: 0 37px;
     height: 100%;
+    border: 1px solid $color-line-gray;
+  }
+
+  @media (min-width: 1300px) {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 37px 42px;
     border: 1px solid $color-line-gray;
   }
 }
@@ -14,23 +23,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 84px 0 0;
+  padding: 70px 0 0;
 
   @media (min-width: 768px) {
-    padding: 174px 0 0;
-    width: 174px;
+    padding: 170px 0 0;
+    width: 178px;
     margin: 0 auto;
   }
 
   @media (min-width: 1220px) {
-    padding: 164px 0 0;
+    padding: 156px 0 0;
   }
 }
 
 .card-plus__link-title::before {
   position: absolute;
   content: "";
-  top: 20px;
+  top: 16px;
   left: 50%;
   width: 30px;
   height: 30px;
@@ -39,14 +48,14 @@
   background-repeat: no-repeat;
 
   @media (min-width: 768px) {
-    top: 52px;
+    top: 57px;
     left: 50%;
     width: 60px;
     height: 60px;
   }
 }
 
-.card-pius__title {
+.card-plus__title {
   margin: 0 0 8px;
   font-weight: 400;
   font-size: 16px;
@@ -55,6 +64,13 @@
 
   @media (min-width: 768px) {
     margin: 0 0 23px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: 1300px) {
+    margin: 0 0 27px;
     text-align: center;
     font-size: 20px;
     line-height: 22px;
@@ -69,6 +85,10 @@
   @media (min-width: 768px) {
     width: 165px;
     margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0 auto auto;
   }
 }
 
@@ -87,12 +107,12 @@
   }
 
   @media (min-width: 1220px) {
-    margin: 0 0 104px;
+    margin: 0;
   }
 }
 
 .card-plus__link-button {
-  margin: 0 0 20px;
+  margin: 0 0 9px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +124,19 @@
   line-height: 16px;
   text-transform: uppercase;
 
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+  }
+
   @media (min-width: 768px) {
     margin: 0;
+  }
+
+  @media (min-width: 1300px) {
+    // margin: 90px 0 0;
   }
 }

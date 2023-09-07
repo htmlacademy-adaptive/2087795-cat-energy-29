@@ -50,11 +50,13 @@
       <p class="form-main__header-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     </header>
     <section class="form-main__section">
+      <h2 class="visually-hidden">Подберем питание для вашего любимого кота или кошки.</h2>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <div class="form__wrapper">
           <fieldset class="form__fieldset form__fieldset--info">
             <legend class="visually-hidden">Информация о вашем котике.</legend>
             <ul class="form__items">
+              <!-- form__item-error -->
               <li class="form__item">
                 <label class="form__label" for="cat-name">Имя:*</label>
                 <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Укажите имя кота"
@@ -94,12 +96,14 @@
           <fieldset class="form__fieldset form__fieldset--pet-owner">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
             <ul class="form__items">
-              <li class="form__item">
+              <!-- form__item-email--error -->
+              <li class="form__item form__item-email ">
                 <label class="form__label" for="email">E-mail:*</label>
                 <input class="form__input" type="email" name="email" id="email" placeholder="Укажите электронную почту"
                   value="kuklachev@gmail.com" required>
               </li>
-              <li class="form__item">
+              <!-- form__label-phone--error -->
+              <li class="form__item form__label-phone ">
                 <label class="form__label" for="phone-number">Телефон:*</label>
                 <input class="form__input" type="tel" name="phone-number" id="phone-number"
                   placeholder="Укажите номер телефона" value="8 (960) 900-60-90" required>
@@ -148,7 +152,7 @@
       </form>
     </section>
     <section class="map">
-      <h2 class="visually-hidden">Контакты</h2>
+      <h2 class="visually-hidden">Контакты.</h2>
       <div class="map__wrapper-contacts map__wrapper-contacts--bg">
         <h3 class="map__title">Приглашаем
           <br> к сотрудничеству дилеров!
@@ -181,7 +185,7 @@
   <footer class="footer">
     <div class="footer__wrappers">
       <div class="footer__wrapper">
-        <a class="footer__link-logo" href="#">
+        <a class="footer__link-logo" href="index.html">
           <span class="visually-hidden">Ссылка на главную страницу сайта.</span>
         </a>
       </div>
@@ -205,7 +209,7 @@
         </ul>
       </div>
       <div class="footer__wrapper">
-        <a class="footer__link-copyright" href="#">
+        <a class="footer__link-copyright" target="_blank" rel="nofollow" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="footer__copyright-text">
             HTML Academy
           </p>

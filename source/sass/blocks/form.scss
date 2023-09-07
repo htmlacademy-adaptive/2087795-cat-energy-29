@@ -66,15 +66,15 @@
   gap: 25px;
   margin: 0;
   list-style-type: none;
-  padding: 22px 0 19px;
+  padding: 27px 0 24px;
 }
 
 .form__label-radio {
   position: relative;
-  padding-left: 40px;
+  padding-left: 42px;
 }
 
-.form__fieldset--target label::before {
+.form__label-radio::before {
   content: "";
   position: absolute;
   box-sizing: border-box;
@@ -85,6 +85,14 @@
   transform: translateY(-50%);
   border: 1px solid $color-line-gray;
   border-radius: 50%;
+}
+
+.form__label-radio:hover::before {
+  border: 1px solid #bababa;
+}
+
+.form__label-radio:disabled {
+  opacity: 0.3;
 }
 
 .form__fieldset--target input:checked + label::after {
@@ -107,7 +115,7 @@
   font-weight: 400;
   text-transform: none;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 26px;
 }
 
 .form__fieldset-wrapper {
@@ -166,8 +174,8 @@
 
 .form__textarea-text {
   flex-grow: 1;
-  padding: 14px 15px;
-  height: 150px;
+  padding: 14px 10px;
+  height: 120px;
   border: 1px solid $color-line-gray;
   text-align: center;
 }
@@ -191,13 +199,13 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 30px);
-  row-gap: 13px;
+  row-gap: 12px;
   align-items: center;
 }
 
 .form__label-checkbox {
   position: relative;
-  padding-left: 40px;
+  padding-left: 45px;
 }
 
 .form__fieldset--optional .form__label-checkbox::before {
@@ -212,7 +220,15 @@
   border: 1px solid $color-line-gray;
 }
 
-.form__fieldset--optional .form__label-checkbox::after {
+.form__label-checkbox:hover::before {
+  border: 1px solid #bababa;
+}
+
+.form__label-checkbox:disabled {
+  opacity: 0.3;
+}
+
+.form__fieldset--optional input:checked + label::after {
   content: "";
   position: absolute;
   box-sizing: border-box;
@@ -243,6 +259,58 @@
   border: 1px solid $color-line-gray;
 }
 
+.form__item-email {
+  position: relative;
+}
+
+.form__item-email::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 18px;
+
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  mask-image: url("../../img/email.svg");
+  background-color: #222222;
+}
+
+.form__item-email:focus-within::after {
+  background-color: #68b738;
+}
+
+.form__label-phone {
+  position: relative;
+}
+
+.form__label-phone::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 18px;
+
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  mask-image: url("../../img/phone.svg");
+  background-color: #222222;
+}
+
+.form__label-phone:focus-within::after {
+  background-color: #68b738;
+}
+
+
+.form__input::placeholder {
+  font-size: 14px;
+  font-family: $font-text;
+  text-transform: none;
+  color: $color-line-gray;
+  // word-break: break-all;
+  // white-space: pre-wrap;
+}
+
 // ------------------------
 
 .form__button-wrapper {
@@ -258,6 +326,15 @@
   border: none;
   outline: none;
   color: $color-white;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5eaa2f;
+  }
 }
 
 .form__footnote {
@@ -294,14 +371,14 @@
 
   .form__fieldset--target {
     padding: 0 27px;
-    margin: 0 70px 75px;
+    margin: 0 70px 65px;
     border: 1px solid $color-line-gray;
   }
 
   .form__fieldset--target .form__items {
-    gap: 30px;
+    gap: 34px;
     margin: 0;
-    padding: 23px 0 27px;
+    padding: 31px 0 34px;
   }
 
   .form__label-radio {
@@ -355,12 +432,12 @@
 
   .form__fieldset--comment {
     padding: 0;
-    margin: 0 0 53px;
+    margin: 0 0 65px;
   }
 
   .form__fieldset--optional {
     padding: 0;
-    margin: 0 0 54px;
+    margin: 0 0 51px;
   }
 
   .form__fieldset--pet-owner .form__title,
@@ -410,7 +487,7 @@
     border: 1px solid $color-line-gray;
   }
 
-  .form__fieldset--optional .form__label-checkbox::after {
+  .form__fieldset--optional input:checked + label::after {
     content: "";
     position: absolute;
     box-sizing: border-box;
@@ -428,8 +505,8 @@
   }
 
   .form__textarea-text {
-    padding: 11px 20px;
-    height: 175px;
+    padding: 18px 20px;
+    height: 138px;
     text-align: start;
   }
 
@@ -462,7 +539,7 @@
 
   .form__button-wrapper {
     padding: 0 70px;
-    margin-bottom: 72px;
+    margin-bottom: 62px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 52px;
@@ -504,13 +581,13 @@
   }
 
   .form__fieldset--target {
-    padding: 28px 28px 25px;
+    padding: 35px 28px 25px;
     margin: 0;
     border: 1px solid $color-line-gray;
   }
 
   .form__fieldset--target .form__items {
-    gap: 35px;
+    gap: 34px;
     margin: 0;
     padding: 0;
   }
@@ -564,7 +641,7 @@
   .form__fieldset--comment {
     max-width: 1300px;
     padding: 0;
-    margin: 0 auto 67px;
+    margin: 0 auto 69px;
   }
 
   .form__fieldset--optional {
@@ -595,7 +672,7 @@
 
   .form__textarea-text {
     padding: 11px 20px;
-    height: 174px;
+    height: 150px;
     text-align: start;
   }
 
@@ -644,7 +721,7 @@
 
   .form__label-checkbox {
     position: relative;
-    padding-left: 55px;
+    padding-left: 58px;
   }
 
   .form__fieldset--optional .form__label-checkbox::before {
@@ -659,7 +736,7 @@
     border: 1px solid $color-line-gray;
   }
 
-  .form__fieldset--optional .form__label-checkbox::after {
+  .form__fieldset--optional input:checked + label::after {
     content: "";
     position: absolute;
     box-sizing: border-box;
@@ -673,8 +750,41 @@
 
   .form__button-wrapper {
     width: 1220px;
-    margin: 0 auto 82px;
+    margin: 0 auto 78px;
     padding: 0 40px;
     column-gap: 80px;
   }
+}
+
+// Состояние ошибки
+
+.form__item-email--error input {
+  border: 1px solid #ff0000;
+  outline: 1px solid #ff0000;
+}
+
+.form__item-email--error::after {
+  background-color: #ff0000;
+}
+
+.form__item-email--error:focus-within::after {
+  background-color: #ff0000;
+}
+
+.form__label-phone--error input {
+  border: 1px solid #ff0000;
+  outline: 1px solid #ff0000;
+}
+
+.form__label-phone--error::after {
+  background-color: #ff0000;
+}
+
+.form__label-phone--error:focus-within::after {
+  background-color: #ff0000;
+}
+
+.form__item-error input {
+  border: 1px solid #ff0000;
+  outline: 1px solid #ff0000;
 }

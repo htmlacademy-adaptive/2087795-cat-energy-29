@@ -57,7 +57,7 @@
 
 .example__description {
   position: absolute;
-  top: 45px;
+  top: 48px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -157,7 +157,37 @@
   background-color: #666666;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -2;
+}
+
+.example__button::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #666666;
+}
+
+.example__button:hover::after {
+  background-color: #68b738;
+}
+
+.example__button:hover::before {
+  border: 2px solid #68b738;
+}
+
+.example__button:hover path {
+  fill: #68b738;
+}
+
+.example__button:active {
+  opacity: 0.6;
 }
 
 @media (max-width: 767px) {
@@ -182,13 +212,13 @@
   }
 
   .example__text {
-    margin-bottom: 65px;
+    margin-bottom: 40px;
     font-size: 16px;
     line-height: 24px;
   }
 
   .example__wrapper-items {
-    margin-bottom: 99px;
+    margin-bottom: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,7 +231,7 @@
 
   .example__item-border {
     width: 162px;
-    height: 77px;
+    height: 72px;
     padding-top: 15px;
     border: 1px solid $color-line-gray;
     border-radius: 4px;
@@ -222,7 +252,7 @@
 
   .example__description {
     position: absolute;
-    top: 67px;
+    top: 63px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -248,7 +278,7 @@
 
   .example__subtitle span {
     display: block;
-    margin-top: 15px;
+    margin-top: 12px;
   }
 
   .example__wrapper-img {
@@ -275,20 +305,20 @@
   }
 
   .example__text {
-    margin-bottom: 69px;
-    width: 436px;
+    margin-bottom: 53px;
+    width: 432px;
     // font-size: 16px;
     // line-height: 24px;
   }
 
   .example__wrapper-items {
     margin-bottom: 75px;
-    width: 356px;
+    width: 370px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    gap: 55px;
+    gap: 45px;
   }
 
   .example__item-border {
