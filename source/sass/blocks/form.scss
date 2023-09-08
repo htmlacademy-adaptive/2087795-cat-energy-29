@@ -8,22 +8,46 @@
   color: $color-text;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .form__wrapper {
   display: grid;
   grid-template-columns: 1fr;
+
+  @media (min-width: 1300px) {
+    width: 1220px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 81px;
+    margin-bottom: 69px;
+  }
 }
 
-.form__fieldset--info,
 .form__fieldset--target {
   display: inline;
 }
 
 .form__fieldset--info {
+  display: inline;
   padding: 0 20px;
   border: none;
   margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    padding: 0 70px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: 1300px) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .form__fieldset--info .form__items {
@@ -34,6 +58,11 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: 768px) {
+    grid-template-rows: 52px 52px 52px;
+    row-gap: 20px;
+  }
 }
 
 .form__fieldset--info .form__item {
@@ -122,7 +151,6 @@
   position: relative;
   padding: 0;
   margin: 0;
-  // background-color: antiquewhite;
 }
 
 .form__fieldset-wrapper::before {
@@ -237,7 +265,7 @@
   top: 50%;
   left: 2px;
   transform: translateY(-50%);
-  background-image: url("../../img/tick.svg");
+  background-image: url("../../img/stek/stek.svg#tick");
   border-radius: 50%;
 }
 
@@ -259,56 +287,31 @@
   border: 1px solid $color-line-gray;
 }
 
-.form__item-email {
-  position: relative;
-}
-
-.form__item-email::after {
-  position: absolute;
-  content: "";
-  width: 22px;
-  height: 18px;
-
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  mask-image: url("../../img/email.svg");
-  background-color: #222222;
-}
-
-.form__item-email:focus-within::after {
-  background-color: #68b738;
-}
-
+.form__item-email,
 .form__label-phone {
   position: relative;
 }
 
-.form__label-phone::after {
+.form__input-icon {
   position: absolute;
-  content: "";
-  width: 22px;
-  height: 18px;
-
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  mask-image: url("../../img/phone.svg");
-  background-color: #222222;
+  top: calc(50% - 10px);
+  right: 15px;
+  stroke: #222222;
 }
 
-.form__label-phone:focus-within::after {
-  background-color: #68b738;
+.form__label-phone:focus-within .form__input-icon {
+  stroke: #68b738;
 }
 
+.form__item-email:focus-within .form__input-icon {
+  stroke: #68b738;
+}
 
 .form__input::placeholder {
   font-size: 14px;
   font-family: $font-text;
   text-transform: none;
   color: $color-line-gray;
-  // word-break: break-all;
-  // white-space: pre-wrap;
 }
 
 // ------------------------
@@ -347,23 +350,6 @@
 }
 
 @media (min-width: 768px) {
-  .form,
-  .form__input,
-  .form__textarea-text,
-  .form__button {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .form__fieldset--info {
-    padding: 0 70px;
-    margin-bottom: 72px;
-  }
-
-  .form__fieldset--info .form__items {
-    grid-template-rows: 52px 52px 52px;
-    row-gap: 20px;
-  }
 
   .form__fieldset--info .form__input {
     padding: 0 20px;
@@ -410,7 +396,6 @@
     position: relative;
     padding: 0;
     margin: 0;
-    // background-color: antiquewhite;
   }
 
   .form__fieldset-wrapper::before {
@@ -489,14 +474,7 @@
 
   .form__fieldset--optional input:checked + label::after {
     content: "";
-    position: absolute;
-    box-sizing: border-box;
-    width: 26px;
-    height: 26px;
-    top: 50%;
     left: 6px;
-    transform: translateY(-50%);
-    background-image: url("../../img/tick.svg");
   }
 
   .form__textarea {
@@ -519,11 +497,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: 52px 52px;
     row-gap: 20px;
-  }
-
-  .form__fieldset--pet-owner .form__item {
-    display: flex;
-    align-items: center;
   }
 
   .form__fieldset--pet-owner .form__label {
@@ -566,19 +539,6 @@
 }
 
 @media (min-width: 1300px) {
-  .form__wrapper {
-    width: 1220px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 81px;
-    margin-bottom: 69px;
-  }
-
-  .form__fieldset--info {
-    padding: 0;
-    margin: 0;
-  }
 
   .form__fieldset--target {
     padding: 35px 28px 25px;
@@ -616,7 +576,6 @@
     position: relative;
     padding: 0;
     margin: 0;
-    // background-color: antiquewhite;
   }
 
   .form__fieldset-wrapper::before {
@@ -690,11 +649,6 @@
     row-gap: 0;
   }
 
-  .form__fieldset--pet-owner .form__item {
-    display: flex;
-    align-items: center;
-  }
-
   .form__fieldset--pet-owner .form__label {
     padding-right: 13px;
   }
@@ -736,18 +690,6 @@
     border: 1px solid $color-line-gray;
   }
 
-  .form__fieldset--optional input:checked + label::after {
-    content: "";
-    position: absolute;
-    box-sizing: border-box;
-    width: 26px;
-    height: 26px;
-    top: 50%;
-    left: 6px;
-    transform: translateY(-50%);
-    background-image: url("../../img/tick.svg");
-  }
-
   .form__button-wrapper {
     width: 1220px;
     margin: 0 auto 78px;
@@ -758,33 +700,10 @@
 
 // Состояние ошибки
 
-.form__item-email--error input {
-  border: 1px solid #ff0000;
-  outline: 1px solid #ff0000;
+.form__input:invalid {
+  border-color: #ff0000;
 }
 
-.form__item-email--error::after {
-  background-color: #ff0000;
-}
-
-.form__item-email--error:focus-within::after {
-  background-color: #ff0000;
-}
-
-.form__label-phone--error input {
-  border: 1px solid #ff0000;
-  outline: 1px solid #ff0000;
-}
-
-.form__label-phone--error::after {
-  background-color: #ff0000;
-}
-
-.form__label-phone--error:focus-within::after {
-  background-color: #ff0000;
-}
-
-.form__item-error input {
-  border: 1px solid #ff0000;
-  outline: 1px solid #ff0000;
+.form__input:invalid + .form__input-icon {
+  stroke: #ff0000;
 }

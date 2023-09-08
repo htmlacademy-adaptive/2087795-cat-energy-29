@@ -19,13 +19,12 @@
       <nav class="main-header__nav">
         <a class="main-header__link-logo" href="index.html">
           <picture>
-            <source media="(min-width: 1260px)" width="202" height="59" srcset="./img/logo-img-desktop.svg">
-            <source media="(min-width: 768px)" width="174" height="50" srcset="./img/logo-img-tablet.svg">
-            <img class="main-header__logo-img" width="33" height="38" src="./img/logo-img.svg"
-              alt="Логотип кэт энерджи.">
+            <source media="(min-width: 1260px)" width="202" height="59" srcset="../img/content/logo-img-desktop.svg">
+            <source media="(min-width: 768px)" width="174" height="50" srcset="../img/content/logo-img-tablet.svg">
+            <img class="main-header__logo-img" width="33" height="38" src="../img/content/logo-img.svg" alt="Логотип кэт энерджи.">
           </picture>
-          <img class="main-header__logo-text" width="101" height="18" src="./img/logo-text.svg"
-            alt="Логотип текстовый кэт энерджи.">
+          <img class="main-header__logo-text" width="101" height="18" src="../img/content/logo-text.svg"
+              alt="Логотип текстовый кэт энерджи.">
         </a>
         <button class="main-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
@@ -56,7 +55,6 @@
           <fieldset class="form__fieldset form__fieldset--info">
             <legend class="visually-hidden">Информация о вашем котике.</legend>
             <ul class="form__items">
-              <!-- form__item-error -->
               <li class="form__item">
                 <label class="form__label" for="cat-name">Имя:*</label>
                 <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Укажите имя кота"
@@ -96,17 +94,21 @@
           <fieldset class="form__fieldset form__fieldset--pet-owner">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
             <ul class="form__items">
-              <!-- form__item-email--error -->
-              <li class="form__item form__item-email ">
+              <li class="form__item form__item-email">
                 <label class="form__label" for="email">E-mail:*</label>
                 <input class="form__input" type="email" name="email" id="email" placeholder="Укажите электронную почту"
                   value="kuklachev@gmail.com" required>
+                <svg class="form__input-icon" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 8.5v8h17.004v-8M1.5 3.5h17.004v2l-8.502 6-8.502-6v-2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </li>
-              <!-- form__label-phone--error -->
-              <li class="form__item form__label-phone ">
+              <li class="form__item form__label-phone">
                 <label class="form__label" for="phone-number">Телефон:*</label>
                 <input class="form__input" type="tel" name="phone-number" id="phone-number"
                   placeholder="Укажите номер телефона" value="8 (960) 900-60-90" required>
+                <svg class="form__input-icon" width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.002 10h8.502m0 0-2.5-2.5m2.5 2.5-2.5 2.5m-7.502-10v5h-3v5h3v5h-2.5C4.5 17.5 3.5 16.5 3.5 15V5c0-1.5 1-2.5 2.5-2.5h2.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </li>
             </ul>
           </fieldset>
@@ -175,9 +177,13 @@
           title="Офис компании по адресу Большая Конюшенная ул. 19/8, Санкт-Петербург">
         </iframe>
         <picture>
-          <source media="(min-width: 1260px)" width="1440" height="400" srcset="./img/map-desktop.jpg">
-          <source media="(min-width: 768px)" width="768" height="400" srcset="./img/map-tablet.jpg">
-          <img class="map__img" width="320" height="362" src="./img/map-mobile.jpg" alt="Положение магазина на карте.">
+          <source type="image/webp" media="(min-width: 1260px)" width="1440" height="400" srcset="../img/bg/map-desktop.webp 1x, ../img/bg/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" width="768" height="400" srcset="../img/bg/map-tablet.webp 1x, ../img/bg/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="../img/bg/map-mobile.webp 1x, ../img/bg/map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1260px)" width="1440" height="400" srcset="../img/bg/map-desktop.jpg 1x, ../img/bg/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="768" height="400" srcset="../img/bg/map-tablet.jpg 1x, ../img/bg/map-tablet@2x.jpg 2x">
+          <img class="map__img" width="320" height="362" src="../img/bg/map-mobile.jpg" srcset="../img/bg/map-mobile@2x.jpg 2x" alt="Положение магазина на карте.">
         </picture>
       </div>
     </section>

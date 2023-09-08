@@ -44,7 +44,7 @@
   width: 30px;
   height: 30px;
   transform: translateX(-50%);
-  background-image: url("../../img/sprite.svg#icon-plus");
+  background-image: url("../../img/stek/stek.svg#icon-plus");
   background-repeat: no-repeat;
 
   @media (min-width: 768px) {
@@ -52,6 +52,7 @@
     left: 50%;
     width: 60px;
     height: 60px;
+    background-image: url("../../img/stek/stek.svg#icon-plus-tablet");
   }
 }
 
