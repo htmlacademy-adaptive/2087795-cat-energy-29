@@ -60,8 +60,10 @@
 }
 
 .unique-point__link {
+  margin: 0;
+  padding: 5px 15px;
   display: flex;
-  height: 40px;
+  min-height: 40px;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -136,6 +138,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
+    text-align: start;
   }
 
   .unique-point__wrapper-product {
@@ -151,11 +154,9 @@
 
   .unique-point__link {
     margin: 0 0 0 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 244px;
-    height: 54px;
+    padding: 5px 26px;
+    max-width: 300px;
+    min-height: 54px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -216,21 +217,26 @@
   }
 
   .unique-point__text {
+    max-width: 414px;
     margin: 0 0 52px;
     padding: 0 0 0 80px;
+    text-align: start;
+    line-height: 25px;
   }
 
   .unique-point__link {
-    margin: 0 0 0 80px;
+    margin: 0 0 50px 80px;
+    padding: 10px 26px;
+    max-width: 300px;
+    min-height: 54px;
+    line-height: 25px;
   }
 
   .unique-point__wrapper-product {
     position: absolute;
     margin: 0;
-    /* margin: -80px auto 0; */
     order: 0;
-    /* z-index: -1;    */
-    top: 143px;
+    bottom: 52px;
     right: -388px;
   }
 

@@ -137,18 +137,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
-    row-gap: 0;
+    row-gap: 100px;
   }
 
   .advantages__item {
     position: relative;
-    // grid-template-columns: 1fr;
-    // grid-template-rows: 80px 1fr;
-    // row-gap: 31px;
     padding-right: 0;
-    // font-size: 16px;
-    // line-height: 24px;
-    // counter-increment: number;
   }
 
   .advantages__item::before {
