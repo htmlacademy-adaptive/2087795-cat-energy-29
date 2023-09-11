@@ -11,11 +11,15 @@
 }
 
 .form-main__header-text {
-  margin-bottom: 39px;
+  margin-bottom: 15px;
   width: 226px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.form-main__header-text:last-of-type {
+  margin-bottom: 39px;
 }
 
 @media (min-width: 768px) {
@@ -30,17 +34,21 @@
   }
 
   .form-main__header-text {
-    margin-bottom: 66px;
+    margin-bottom: 20px;
     width: 325px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .form-main__header-text:last-of-type {
+    margin-bottom: 66px;
   }
 }
 
 @media (min-width: 1300px) {
   .form-main__header {
     max-width: 1220px;
-    padding: 0 40px;
+    padding: 5px 40px 0;
     margin: 0 auto;
   }
 
@@ -49,6 +57,10 @@
   }
 
   .form-main__header-text {
-    margin-bottom: 56px;
+    margin-bottom: 30px;
+  }
+
+  .form-main__header-text:last-of-type {
+    margin-bottom: 65px;
   }
 }

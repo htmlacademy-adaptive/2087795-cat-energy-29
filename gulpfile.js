@@ -11,6 +11,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -29,51 +30,53 @@ export const styles = () => {
 
 // HTML
 
-const html = () => {
+export const html = () => {
   return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
-const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
-  .pipe(gulp.dest('build/js'))
   .pipe(terser()) // Строка добавлена из видео
+  .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());  //в видео не было этой строки, это из сборки предложеной в конце раздела
 }
 
  // Images
 
-const optimizeImages = () => {
+export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
 }
 
-const copyImages = () => {
+export const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
-const createWebp = () => {
+export const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh({
   webp: {}
 }))
   .pipe(gulp.dest('build/img'))
 }
+
 // SVG
 
-const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+export const svg = () =>
+  gulp.src(['source/img/**/*.svg', '!source/img/sprite/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
+export const sprite = () => {
+  return gulp.src('source/img/sprite/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
   inlineSvg: true

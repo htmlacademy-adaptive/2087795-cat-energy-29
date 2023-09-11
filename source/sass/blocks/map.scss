@@ -68,7 +68,7 @@
 
 @media (min-width: 768px) {
   .map__wrapper-contacts {
-    padding: 60px 30px;
+    padding: 60px 70px;
   }
 
   .map__wrapper-contacts--bg {
@@ -128,7 +128,7 @@
     justify-content: space-between;
 
     background-color: $color-white;
-    padding: 60px 80px;
+    padding: 52px 80px 56px;
   }
 
   .map__wrapper-contacts--bg {
@@ -144,9 +144,10 @@
   }
 
   .map__wrapper-text {
-    width: 160px;
+    width: 157px;
     font-size: 16px;
     line-height: 20px;
+    padding-bottom: 5px;
   }
 
   .map__text {
@@ -154,7 +155,7 @@
   }
 
   .map__text:first-child {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .map__img {

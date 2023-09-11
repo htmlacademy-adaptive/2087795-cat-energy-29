@@ -57,7 +57,7 @@
 
 .example__description {
   position: absolute;
-  top: 45px;
+  top: 48px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -84,41 +84,28 @@
 
 .example__wrapper-img {
   position: relative;
-  border: 1px solid #ff2a00;
   text-align: center;
-
-  // width: 280px;
   margin: 0 auto;
 }
 
 .example__image {
-  // border: 1px solid #00ff40;
-  // background-color: #00ff40;
-
   width: 50%;
   overflow: hidden;
 }
 
 .example__img {
   display: block;
-  // border: 1px solid #0400ff;
   width: 200%;
   max-width: 200%;
 }
 
 .example__image-2 {
-  // border: 1px solid #00ffe1;
-  // background-color: #00ffe1;
-
   width: 50%;
   overflow: hidden;
 
   position: absolute;
   top: 0;
   right: 0;
-  // bottom: 50%;
-  // width: 100%;
-  // height: auto;
   height: 100%;
 }
 
@@ -157,7 +144,37 @@
   background-color: #666666;
   left: 50%;
   transform: translateX(-50%);
+  z-index: -2;
+}
+
+.example__button::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #666666;
+}
+
+.example__button:hover::after {
+  background-color: #68b738;
+}
+
+.example__button:hover::before {
+  border: 2px solid #68b738;
+}
+
+.example__button:hover path {
+  fill: #68b738;
+}
+
+.example__button:active {
+  opacity: 0.6;
 }
 
 @media (max-width: 767px) {
@@ -182,13 +199,13 @@
   }
 
   .example__text {
-    margin-bottom: 65px;
+    margin-bottom: 40px;
     font-size: 16px;
     line-height: 24px;
   }
 
   .example__wrapper-items {
-    margin-bottom: 99px;
+    margin-bottom: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -201,28 +218,20 @@
 
   .example__item-border {
     width: 162px;
-    height: 77px;
+    height: 72px;
     padding-top: 15px;
     border: 1px solid $color-line-gray;
     border-radius: 4px;
   }
 
   .example__weight {
-    // margin: 0;
-    // margin-bottom: 8px;
-    // padding: 0;
-
-    // font-family: $font-heading;
-    // font-weight: 400;
     font-size: 30px;
     line-height: 37px;
-    // text-transform: uppercase;
-    // text-align: center;
   }
 
   .example__description {
     position: absolute;
-    top: 67px;
+    top: 63px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -248,7 +257,7 @@
 
   .example__subtitle span {
     display: block;
-    margin-top: 15px;
+    margin-top: 12px;
   }
 
   .example__wrapper-img {
@@ -258,45 +267,53 @@
 
 @media (min-width: 1260px) {
   .example {
-    min-height: 597px;
-    background: linear-gradient(180deg, #ffffff 136px, #eaeaea 136px);
+    min-height: auto;
+    background: linear-gradient(180deg, #ffffff 23%, #eaeaea 23%);
   }
 
   .example__wrapper {
     position: relative;
+    padding: 0 0 75px;
     max-width: 1220px;
     margin: 0 auto;
-    padding: 0;
   }
 
   .example__title {
-    padding-top: 0;
-    margin-bottom: 146px;
+    padding: 0 0 20px;
+    margin: 0;
+    max-width: 700px;
+  }
+
+  .example__text:nth-child(2) {
+    padding: 76px 0 0 0;
   }
 
   .example__text {
-    margin-bottom: 69px;
-    width: 436px;
-    // font-size: 16px;
-    // line-height: 24px;
+    width: 432px;
+    padding: 20px 0 0 0;
+    margin: 0 0 20px;
+  }
+
+  .example__text:last-of-type {
+    margin: 0 0 76px;
   }
 
   .example__wrapper-items {
-    margin-bottom: 75px;
-    width: 356px;
+    margin: 0;
+    width: 370px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    gap: 55px;
+    gap: 45px;
+  }
+
+  .example__items {
+    margin: 0;
   }
 
   .example__item-border {
-    // width: 162px;
     height: 72px;
-    // padding-top: 15px;
-    // border: 1px solid $color-line-gray;
-    // border-radius: 4px;
   }
 
   .example__description {
@@ -313,12 +330,8 @@
     margin: 0 0 0;
     padding-left: 0;
     width: auto;
-    // font-family: $font-heading;
-    // font-weight: 400;
     font-size: 20px;
     line-height: 20px;
-    // color: $color-black;
-    // text-transform: uppercase;
     text-align: start;
   }
 
@@ -330,7 +343,7 @@
 
   .example__wrapper-img {
     position: absolute;
-    top: 0;
+    bottom: 85px;
     right: 0;
     min-width: 560px;
     margin: 0;

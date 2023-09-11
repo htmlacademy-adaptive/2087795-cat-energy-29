@@ -3,7 +3,7 @@
 }
 
 .footer__wrappers {
-  padding: 20px 20px;
+  padding: 16px 20px 20px;
 
   display: flex;
   flex-direction: column;
@@ -17,15 +17,24 @@
   justify-content: center;
 }
 
+.footer__wrapper:nth-child(2) {
+  padding: 15px 0 12px;
+}
+
 .footer__wrapper:not(:last-child) {
   border-bottom: 1px solid $color-line-gray;
 }
 
+.footer__wrapper:last-child {
+  padding: 28px 0 25px;
+}
+
 .footer__link-logo {
-  mask-image: url("../../img/sprite.svg#logo-text");
+  mask-image: url("../img/stek/stek.svg#logo-text");
   background-color: #111111;
   width: 128px;
   height: 24px;
+  padding: 0 20px;
 }
 
 .footer__link-logo:hover {
@@ -40,7 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 21px;
 
   list-style-type: none;
   margin: 0;
@@ -57,24 +66,24 @@
 }
 
 .footer__link--vk {
-  mask-image: url("../../img/sprite.svg#vk");
+  mask-image: url("../img/stek/stek.svg#vk");
   background-color: #666666;
-  width: 28px;
-  height: 22px;
+  width: 26px;
+  height: 20px;
 }
 
 .footer__link--youtub {
-  mask-image: url("../../img/sprite.svg#youtub");
+  mask-image: url("../img/stek/stek.svg#youtub");
   background-color: #666666;
-  width: 28px;
-  height: 22px;
+  width: 26px;
+  height: 20px;
 }
 
 .footer__link--telegram {
-  mask-image: url("../../img/sprite.svg#telegram");
+  mask-image: url("../img/stek/stek.svg#telegram");
   background-color: #666666;
-  width: 28px;
-  height: 22px;
+  width: 26px;
+  height: 20px;
 }
 
 .footer__link:hover {
@@ -108,7 +117,7 @@
 .footer__copyright-text::before {
   position: absolute;
   content: "";
-  mask-image: url("../../img/sprite.svg#htmlacademy");
+  mask-image: url("../img/stek/stek.svg#htmlacademy");
   background-color: #666666;
   width: 27px;
   height: 34px;
@@ -125,9 +134,9 @@
   opacity: 0.3;
 }
 
-@media (min-width: 678px) {
+@media (min-width: 768px) {
   .footer__wrappers {
-    padding: 55px 30px;
+    padding: 35px 30px 38px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -144,14 +153,25 @@
     border-bottom: none;
   }
 
+  .footer__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+
+    list-style-type: none;
+    margin: 0 0 0 34px;
+    padding: 0;
+  }
+
   .footer__link-copyright {
     width: auto;
     justify-content: end;
-    gap: 23px;
+    // gap: 20px;
   }
 
   .footer__copyright-text {
-    padding-right: 43px;
+    padding-right: 48px;
   }
 }
 
@@ -159,6 +179,6 @@
   .footer__wrappers {
     width: 1220px;
     margin: 0 auto;
-    padding: 66px 0;
+    padding: 48px 0 50px;
   }
 }
