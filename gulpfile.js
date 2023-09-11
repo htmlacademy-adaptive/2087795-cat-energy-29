@@ -11,6 +11,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
@@ -29,17 +30,18 @@ export const styles = () => {
 
 // HTML
 
-const html = () => {
+export const html = () => {
   return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
-const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
-  .pipe(gulp.dest('build/js'))
   .pipe(terser()) // Строка добавлена из видео
+  .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());  //в видео не было этой строки, это из сборки предложеной в конце раздела
 }
 

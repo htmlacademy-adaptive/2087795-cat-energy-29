@@ -31,6 +31,11 @@
 
 .form__fieldset--target {
   display: inline;
+  padding: 0 20px;
+  margin-bottom: 26px;
+  border: none;
+  border-top: 1px solid $color-line-gray;
+  border-bottom: 1px solid $color-line-gray;
 }
 
 .form__fieldset--info {
@@ -81,14 +86,6 @@
   align-self: stretch;
   flex-grow: 1;
   border: 1px solid $color-line-gray;
-}
-
-.form__fieldset--target {
-  padding: 0 20px;
-  margin-bottom: 26px;
-  border: none;
-  border-top: 1px solid $color-line-gray;
-  border-bottom: 1px solid $color-line-gray;
 }
 
 .form__fieldset--target .form__items {
@@ -354,7 +351,6 @@
 }
 
 @media (min-width: 768px) {
-
   .form__fieldset--info .form__input {
     padding: 0 20px;
   }
@@ -544,7 +540,6 @@
 }
 
 @media (min-width: 1300px) {
-
   .form__fieldset--target {
     padding: 35px 28px 25px;
     margin: 0;

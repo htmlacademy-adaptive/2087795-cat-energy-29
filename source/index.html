@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="./favicon.ico">
     <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+    <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" type="font/wolf2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" type="font/wolf2" as="font" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="./img/favicon/180.png">
     <link rel="manifest" href="./manifest.webmanifest">
   </head>
@@ -176,7 +178,7 @@
                 <source media="(min-width: 768px)" width="560" height="512"
                 srcset="./img/content/cat-before-tablet.png 1x, ./img/content/cat-before-tablet@2x.png 2x">
 
-                <img class="example__img" src="./img/content/cat-before.png" srcset="./img/content/cat-before@2x.png 2x" width="280" height="256" alt="Результат 'До'.">
+                <img class="example__img" src="./img/content/cat-before.png" srcset="./img/content/cat-before@2x.png 2x" width="280" height="256" loading="lazy" alt="Результат 'До'.">
               </picture>
             </div>
             <div class="example__image-2">
@@ -185,7 +187,7 @@
                 <source type="image/webp" srcset="./img/content/cat-after.webp 1x, ./img/content/cat-after@2x.webp 2x">
                 <source media="(min-width: 768px)" width="560" height="512"
                 srcset="./img/content/cat-after-tablet.png 1x, ./img/content/cat-after-tablet@2x.png 2x">
-                <img class="example__img-2" src="./img/content/cat-after.png" srcset="./img/content/cat-after@2x.png 2x" width="280" height="256" alt="Результат 'После'.">
+                <img class="example__img-2" src="./img/content/cat-after.png" srcset="./img/content/cat-after@2x.png 2x" width="280" height="256" loading="lazy" alt="Результат 'После'.">
               </picture>
             </div>
             <button class="example__button" type="button">
@@ -228,7 +230,7 @@
 
             <source media="(min-width: 1260px)" width="1440" height="400" srcset="./img/bg/map-desktop.jpg 1x, ./img/bg/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" width="768" height="400" srcset="./img/bg/map-tablet.jpg 1x, ./img/bg/map-tablet@2x.jpg 2x">
-            <img class="map__img" width="320" height="362" src="./img/bg/map-mobile.jpg" srcset="./img/bg/map-mobile@2x.jpg 2x" alt="Положение магазина на карте.">
+            <img class="map__img" width="320" height="362" src="./img/bg/map-mobile.jpg" srcset="./img/bg/map-mobile@2x.jpg 2x" loading="lazy" alt="Положение магазина на карте.">
           </picture>
         </div>
       </section>

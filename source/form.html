@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" type="font/wolf2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" type="font/wolf2" as="font" crossorigin="anonymous">
   <link rel="apple-touch-icon" href="./img/favicon/180.png">
   <link rel="manifest" href="./manifest.webmanifest">
 </head>
@@ -177,15 +179,17 @@
           referrerpolicy="no-referrer-when-downgrade"
           title="Офис компании по адресу Большая Конюшенная ул. 19/8, Санкт-Петербург">
         </iframe>
-        <picture>
-          <source type="image/webp" media="(min-width: 1260px)" width="1440" height="400" srcset="./img/bg/map-desktop.webp 1x, ./img/bg/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" width="768" height="400" srcset="./img/bg/map-tablet.webp 1x, ./img/bg/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="./img/bg/map-mobile.webp 1x, ./img/bg/map-mobile@2x.webp 2x">
+        <noscript>
+          <picture>
+            <source type="image/webp" media="(min-width: 1260px)" width="1440" height="400" srcset="./img/bg/map-desktop.webp 1x, ./img/bg/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" width="768" height="400" srcset="./img/bg/map-tablet.webp 1x, ./img/bg/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/bg/map-mobile.webp 1x, ./img/bg/map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1260px)" width="1440" height="400" srcset="./img/bg/map-desktop.jpg 1x, ./img/bg/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" width="768" height="400" srcset="./img/bg/map-tablet.jpg 1x, ./img/bg/map-tablet@2x.jpg 2x">
-          <img class="map__img" width="320" height="362" src="./img/bg/map-mobile.jpg" srcset="./img/bg/map-mobile@2x.jpg 2x" alt="Положение магазина на карте.">
-        </picture>
+            <source media="(min-width: 1260px)" width="1440" height="400" srcset="./img/bg/map-desktop.jpg 1x, ./img/bg/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="768" height="400" srcset="./img/bg/map-tablet.jpg 1x, ./img/bg/map-tablet@2x.jpg 2x">
+            <img class="map__img" width="320" height="362" src="./img/bg/map-mobile.jpg" srcset="./img/bg/map-mobile@2x.jpg 2x" loading="lazy" alt="Положение магазина на карте.">
+          </picture>
+        </noscript>
       </div>
     </section>
   </main>

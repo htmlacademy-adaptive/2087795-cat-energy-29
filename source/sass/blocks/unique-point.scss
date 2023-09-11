@@ -178,7 +178,8 @@
     width: 50%;
     max-height: 694px;
     order: 2;
-    object-fit: fill;
+
+    object-fit: cover;
     background: linear-gradient(180deg, #4d4c51 0%, #535257 45.92%, #535257 72%, #4f5054 100%);
   }
 
@@ -193,9 +194,9 @@
   }
 
   .unique-point__bg-img {
-    width: 100%;
+    width: auto;
     height: 100%;
-    object-position: bottom center;
+    object-position: bottom left;
   }
 
   .unique-point__wrapper-bg-2 {
