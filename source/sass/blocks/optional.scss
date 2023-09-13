@@ -84,7 +84,7 @@
 }
 
 .optional__item {
-  padding: 15px 0 18px;
+  padding: 13px 0 18px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 40px;
@@ -100,7 +100,7 @@
   }
 
   @media (min-width: 1300px) {
-    padding: 15px 0 17px;
+    padding: 15px 0 16px;
     grid-template-columns: auto 285px 244px;
     column-gap: 40px;
     grid-template-rows: minmax(40px, max-content);
@@ -130,7 +130,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  margin: 0 0 13px;
+  margin: 0 0 9px;
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -164,7 +164,7 @@
 .optional__item-description {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 13px;
+  margin: 0 0 11px;
   font-family: $font-text;
   font-weight: 400;
   font-size: 14px;
@@ -228,7 +228,7 @@
 
 .optional__present-wrapper {
   position: relative;
-  margin: 33px 0 0;
+  margin: 37px 0 0;
   width: 100%;
   height: 290px;
   overflow: hidden;
@@ -246,7 +246,7 @@
   }
 
   @media (min-width: 768px) {
-    margin: 70px 0 0;
+    margin: 73px 0 0;
     height: 200px;
   }
 

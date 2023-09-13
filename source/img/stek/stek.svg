@@ -108,4 +108,7 @@
       <svg viewBox="0 0 26 26" id="tick">
         <path d="M11 17.718L5.3 11.2695L4.25 12.4574L11 20.0938L22.25 7.36648L21.2 6.09375L11 17.718Z" fill="#68B738"/>
       </svg>
+      <svg viewBox="0 0 7 12" id="polygon">
+        <path d="M7 6L0.25 11.1962L0.25 0.803848L7 6Z" fill="black"/>
+      </svg>
 </svg>

@@ -73,8 +73,8 @@
   }
 
   .advantages__title {
-    padding: 4px 0 0 0;
-    margin: 0 0 72px;
+    padding: 0 0 0 0;
+    margin: 0 0 73px;
     line-height: 60px;
   }
 
@@ -99,6 +99,7 @@
   .advantages__item::before {
     width: 80px;
     height: 80px;
+    background-size: 60px 60px;
   }
 
   .advantages__item::after {
@@ -119,7 +120,7 @@
 
 @media (min-width: 1260px) {
   .advantages {
-    padding-bottom: 127px;
+    padding-bottom: 125px;
     border: none;
   }
 

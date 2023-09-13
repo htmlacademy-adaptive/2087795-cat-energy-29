@@ -25,7 +25,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 81px;
-    margin-bottom: 69px;
+    margin-bottom: 72px;
   }
 }
 
@@ -121,6 +121,10 @@
 
 .form__label-radio:disabled {
   opacity: 0.3;
+}
+
+.form__fieldset--target input:focus + label::before {
+  border: 1px solid #343434;
 }
 
 .form__fieldset--target input:checked + label::after {
@@ -257,6 +261,10 @@
   opacity: 0.3;
 }
 
+.form__fieldset--optional input:focus + label::before {
+  border: 1px solid #343434;
+}
+
 .form__fieldset--optional input:checked + label::after {
   content: "";
   position: absolute;
@@ -296,7 +304,7 @@
 .form__input-icon {
   position: absolute;
   top: calc(50% - 10px);
-  right: 15px;
+  right: 13px;
   stroke: #222222;
 }
 
@@ -338,6 +346,10 @@
   &:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5eaa2f;
+  }
+
+  &:focus-visible {
+    outline: 1px solid #343434;
   }
 }
 
@@ -458,7 +470,7 @@
 
   .form__label-checkbox {
     position: relative;
-    padding-left: 55px;
+    padding-left: 57px;
   }
 
   .form__fieldset--optional .form__label-checkbox::before {
@@ -593,14 +605,14 @@
   .form__fieldset--optional {
     max-width: 1300px;
     padding: 0;
-    margin: 0 auto 76px;
+    margin: 0 auto 72px;
     border: none;
   }
 
   .form__fieldset--comment {
     max-width: 1300px;
     padding: 0;
-    margin: 0 auto 69px;
+    margin: 0 auto 72px;
   }
 
   .form__fieldset--optional {
