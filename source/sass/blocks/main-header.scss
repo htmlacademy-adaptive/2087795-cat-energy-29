@@ -45,13 +45,16 @@
 }
 
 .main-header--index .main-header__menu-link {
-  &:hover {
-    color: rgba(255, 255, 255, 0.6);
+  @media (min-width: 1260px) {
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
 }
 
 @media (max-width: 767px) {
@@ -89,24 +92,64 @@
     border: none;
     outline: none;
     background: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: rgba(207, 207, 207, 0.1);
+    }
   }
 
-  // Если не сработал JS
+  .main-header__wrapper--closed .main-header__toggle::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-black;
+    box-shadow: 0 8px 0 0 $color-black, 0 -8px 0 0 $color-black;
+  }
+
+  .main-header__wrapper--closed .main-header__toggle:active::before {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow:
+      0 8px 0 0 rgba(0, 0, 0, 0.8),
+      0 -8px 0 0 rgba(0, 0, 0, 0.8);
+  }
+
+  .main-header__wrapper--closed .main-header__menu-list {
+    display: none; //закрыла список меню
+  }
+
+  .main-header__wrapper--opened .main-header__menu-list {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $color-white;
+  }
+
+  .main-header__wrapper--opened .main-header__menu-item:first-child {
+    border-top: 1px solid $color-line-gray;
+  }
 
   .main-header__wrapper--nojs .main-header__toggle {
     display: none;
   }
 
-  // Меню ОТКРЫТО
+  .main-header__wrapper--nojs .main-header__menu-list {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-header__wrapper--nojs .main-header__menu-item:first-child {
+    border-top: none;
+  }
 
   .main-header__wrapper--opened .main-header__toggle {
-    display: block;
-
-    &:hover,
-    &:active {
-      background-color: rgba(226, 226, 226, 0.2);
-    }
-
     &::after,
     &::before {
       content: "";
@@ -129,47 +172,11 @@
 
     &:active::before,
     &:active::after {
-      background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.8);
     }
   }
 
-  .main-header__wrapper--opened .main-header__menu-list {
-    position: absolute;
-    top: 65px;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    background-color: $color-white;
-  }
-
-  // Меню ЗАКРЫТО
-
-  .main-header__wrapper--closed .main-header__toggle {
-    display: block;
-  }
-
-  .main-header__wrapper--closed .main-header__toggle::after {
-    content: "";
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $color-black;
-    box-shadow: 0 8px 0 0 $color-black, 0 -8px 0 0 $color-black;
-  }
-
-  .main-header__wrapper--closed .main-header__toggle:active::after {
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow:
-      0 8px 0 0 rgba(0, 0, 0, 0.8),
-      0 -8px 0 0 rgba(0, 0, 0, 0.8);
-  }
-
-  .main-header__wrapper--closed .main-header__menu-list {
-    display: none;
-  }
+  //-------------------
 
   .main-header__menu-list {
     flex-direction: column;
@@ -179,11 +186,6 @@
   .main-header__menu-item {
     width: 100%;
     border-bottom: 1px solid $color-line-gray;
-  }
-
-  .main-header__menu-item:first-child {
-    width: 100%;
-    border-top: 1px solid $color-line-gray;
   }
 
   .main-header__menu-link {
