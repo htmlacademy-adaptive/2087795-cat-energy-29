@@ -14,11 +14,11 @@ img {
   height: auto;
 }
 
-input[type="number"] {
+.form__input[type="number"] {
   appearance: textfield;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.form__input::-webkit-outer-spin-button,
+.form__input::-webkit-inner-spin-button {
   appearance: none;
 }
