@@ -335,7 +335,7 @@
 
   .example__wrapper-img {
     position: absolute;
-    bottom: 85px;
+    top: calc(50% - 280px);
     right: 0;
     min-width: 560px;
     margin: 0;

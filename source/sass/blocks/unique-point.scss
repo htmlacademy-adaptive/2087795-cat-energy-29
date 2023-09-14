@@ -176,7 +176,7 @@
     display: flex;
     justify-content: flex-end;
     width: 50%;
-    max-height: 694px;
+    min-height: 694px;
     order: 2;
 
     object-fit: cover;
@@ -239,7 +239,7 @@
     position: absolute;
     margin: 0;
     order: 0;
-    bottom: 52px;
+    top: calc(56% - 249px);
     right: -388px;
   }
 
